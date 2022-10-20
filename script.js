@@ -27,4 +27,14 @@ for (i = 0; i < 2; i++){
     
 }
 
+if (personalMuvieDB < 10){
+    console.log('Просмотрено мало фильмов!');
+}else if (personalMuvieDB >= 10 && personalMuvieDB < 30 ){
+    console.log('Вы классический зритель!');
+}else if (personalMuvieDB >= 30){
+    console.log('Вы киноиан!');
+}else {
+    console.log('Произошла ошибка!');
+}
+
 console.log(personalMuvieDB);
