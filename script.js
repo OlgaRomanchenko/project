@@ -11,12 +11,20 @@ const personalMuvieDB = {
 
 };
 
-const answer1 = prompt('Один из последних просмотренных фильмов?','');
-const answer2 = prompt('На сколько оцените  его','');
-const answer3 = prompt('Один из последних просмотренных фильмов?','');
-const answer4 = prompt('на сколько оцените его','');
 
-personalMuvieDB[answer1]= answer2;
-personalMuvieDB[answer3]=answer4;
+
+for (i = 0; i < 2; i++){
+    const a = prompt('Один из последних просмотренных фильмов?','');
+    const b = prompt('На сколько оцените  его','');
+    if (a != null && b != null && a != '' && b != '' && a.length < 50 ){
+        personalMuvieDB.movies[a] = b;
+        console.log('done!');
+    
+    }else {
+        console.log('Error');
+        i--;
+    }
+    
+}
 
 console.log(personalMuvieDB);
